@@ -1,0 +1,23 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelaMicaela/intro-electron-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelaMicaela/intro-electron-app/issues"
+  },
+  "homepage": "https://github.com/RafaelaMicaela/intro-electron-app#readme",
+  "devDependencies": {
+    "electron": "^24.3.0"
+  }
+}
