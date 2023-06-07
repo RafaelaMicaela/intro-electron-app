@@ -20,7 +20,7 @@ mkdir my-electron-app && cd my-electron-app
 abra a pasta no seu Vscode e abra o terminal e digite o comando pra iniciar um projeto node
 
 ```sh
-npm init -y
+npm init 
 ```
 
 Em seguida, instale o pacote `electron` nas `devDependencies` do seu aplicativo
@@ -51,8 +51,8 @@ crie um arquivo `index.html` na pasta raíz do seu projeto
     <title>Ola Mundo</title>
 </head>
 <body>
-    <h1>Ola Mundo</h1>
-    <p>Minha primeira aplicação ElectronJs</p>
+    <h1>Ola Mundo </h1>
+    <P>Minha primeira aplicação Electron👋</P>
 </body>
 </html>
 ```
@@ -65,22 +65,21 @@ crie um arquivo `index.js` na pasta raíz do seu projeto e configure adicionando
 const { app, BrowserWindow } = require('electron')
 ```
 
-crie uma variável
+adicione o conteúdo do seu index.js pelo código a seguir.
 
 ```sh
-let win 
-```
+const createWindow = () => {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600
+  })
 
-para iniciar a janela digite os seguintes comandos:
+  win.loadFile('index.html')
+}
 
-```sh
-app.on('ready', () => {
-    win = new BrowserWindow({
-        width: 800,
-        height: 600,
-    })
-    win.loadFile('index.html')
-})
+app.whenReady().then(() => {
+  createWindow()
+}) 
 ```
 
 ## Rodando o projeto
